@@ -24,5 +24,9 @@ class User < ApplicationRecord
   def isGoldSponsor
     return self.isDonor && self.donations.select{ |donation| donation.amount >= 10000 }.count > 0
   end
+  
+  def paypalURL(path)
+    
+  end
 
 end
